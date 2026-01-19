@@ -51,6 +51,12 @@ This project is suitable for:
 - Portfolio showcase on GitHub
 
 ---
+## 🤖 AI Features
+
+The project includes an AI-based Library Assistant built using an agent-based approach inspired by DroidRun’s Agent Framework.  
+The AI helps users by answering queries, recommending books, and suggesting suitable study plans.  
+MobileRun Cloud is used for scalable data handling and future deployment.
+---
 
 ## 🚀 How to Use
 
