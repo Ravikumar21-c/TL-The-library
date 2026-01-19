@@ -56,4 +56,4 @@ This project is suitable for:
 
 1. Clone the repository  
    ```bash
-   git clone https://https://github.com/Ravikumar21-c/TL-The-library
+       https://github.com/Ravikumar21-c/TL-The-library
