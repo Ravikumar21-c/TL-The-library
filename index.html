@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="https://lnk.ink/TLlibrarylogo" type="image/png">
+    <title>TL The Library Booking</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="https://lnk.ink/TLlibrarylogo" alt="TL Library Logo">
+        <div>
+            <h1>THE TL LIBRARY</h1>
+            <span>Explore. Learn. Succeed.</span>
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <!-- LEFT : BOOKING SYSTEM -->
+        <div class="booking">
+
+            <h2>🎟 Seat Booking</h2>
+
+            <input type="text" id="name" placeholder="Student Name">
+
+            <select id="timeSlot">
+                <option value="">Select Time Slot</option>
+                <option value="Early Morning|0">06:00–09:00 (Free)</option>
+                <option value="Morning|400">08:00–12:00 (₹400 / month)</option>
+                <option value="Afternoon|400">12:00–16:00 (₹400 / month)</option>
+                <option value="Evening|400">16:00–20:00 (₹400 / month)</option>
+                <option value="Full Day|1000">08:00–20:00 (₹1000 / month)</option>
+                <option value="Daily|100">Daily Pass (₹100)</option>
+            </select>
+
+            <h3>Select Seat</h3>
+            <div class="seats" id="seats"></div>
+
+            <button onclick="bookSeat()">📲 Book via WhatsApp</button>
+
+            <p id="details"></p>
+
+        </div>
+
+        <!-- RIGHT : LIBRARY INFO -->
+        <div class="info">
+
+            <div class="card">
+                <h3>🏛 Library Facilities</h3>
+                <ul>
+                    <li>📶 High-Speed Wi-Fi</li>
+                    <li>💧 Cold Drinking Water</li>
+                    <li>🤝 Friendly Staff</li>
+                    <li>🔇 Quiet Study Zones</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>📜 Rules / Notes</h3>
+                <ul>
+                    <li>Please maintain silence</li>
+                    <li>No phone calls in study area</li>
+                    <li>Keep your seat clean</li>
+                </ul>
+            </div>
+
+
+            <div class="card">
+                <h3>📚 Search & Rent / Buy Books</h3>
+
+                <!-- SEARCH -->
+                <input type="text" id="searchBook" placeholder="Search book or author..." onkeyup="searchBooks()">
+
+                <!-- BOOK LIST -->
+                <div id="bookList" class="book-list"></div>
+
+                <!-- RENT / BUY TYPE -->
+                <select id="bookType" onchange="updateBookPrice()">
+                    <option value="">Select Option</option>
+                    <option value="library">📖 Library Study</option>
+                    <option value="home">🏠 Home Rent</option>
+                    <option value="buy">🛒 Buy Book</option>
+                </select>
+
+                <!-- PRICE -->
+                <p id="bookPrice" style="font-weight:bold;"></p>
+
+                <button onclick="sendBookRequest()">📲 Send Request on WhatsApp</button>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Library Info -->
+            <div class="footer-box">
+                <h3>📚 THE TL LIBRARY</h3>
+                <p class="footer-text">
+                    A peaceful and modern study library designed for focused learning.
+                    Explore. Learn. Succeed.
+                </p>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="footer-box">
+                <h4>📞 Contact Us</h4>
+                <p>Email: <a href="mailto:tllibrary@gmail.com">tllibrary@gmail.com</a></p>
+                <p>WhatsApp: <a href="https://wa.me/919999999999">+91 99999 99999</a></p>
+                <p>Location: Main Market, City Center</p>
+            </div>
+
+            <!-- Timings & Charges -->
+            <div class="footer-box">
+                <h4>⏰ Timings & Charges</h4>
+                <p>Early Morning: 06:00–09:00 (Free)</p>
+                <p>Morning: ₹400 / month</p>
+                <p>Afternoon: ₹400 / month</p>
+                <p>Evening: ₹400 / month</p>
+                <p><strong>Full Day: ₹1000 / month</strong></p>
+            </div>
+
+            <!-- Facilities -->
+            <div class="footer-box">
+                <h4>✨ Facilities</h4>
+                <ul>
+                    <li>📶 High-Speed Wi-Fi</li>
+                    <li>💧 Drinking Water</li>
+                    <li>🤝 Friendly Staff</li>
+                    <li>🔕 Quiet Study Zones</li>
+                    <li>🪑 Comfortable Seating</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 THE TL LIBRARY • All Rights Reserved
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
