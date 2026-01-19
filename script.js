@@ -169,6 +169,18 @@ function updateBookPrice() {
         priceBox.innerText = `🛒 Buy Price: ₹${price}`;
     }
 }
+//adding chatbot ai suggestion
+function suggestBooks(exam) {
+    if (exam === "upsc")
+        return "UPSC General Studies, NCERT History & Polity";
+
+    if (exam === "ssc")
+        return "SSC Mathematics by Rakesh Yadav";
+
+    if (exam === "coding")
+        return "JavaScript Basics, HTML & CSS Mastery";
+}
+
 
 /// SEND BOOK REQUEST
 function sendBookRequest() {
@@ -271,4 +283,34 @@ function updateBookPrice() {
 
     if (type === "buy")
         priceBox.innerText = `🛒 Buy Price: ₹${selectedBook.buy}`;
+}
+
+
+
+////adding chatbot ai
+
+function aiReply() {
+    const question = document.getElementById("aiInput").value.toLowerCase();
+    let answer = "";
+
+    if (question.includes("timing")) {
+        answer = "Library is open from 6 AM to 8 PM. Full day plan is available.";
+    }
+    else if (question.includes("seat")) {
+        answer = "Seats are available. Please book early to confirm your slot.";
+    }
+    else if (question.includes("upsc")) {
+        answer = "Recommended books: UPSC General Studies, NCERTs. Home rent or buy suggested.";
+    }
+    else if (question.includes("ssc")) {
+        answer = "Recommended book: SSC Mathematics by Rakesh Yadav.";
+    }
+    else if (question.includes("rent")) {
+        answer = "You can rent books for library study or home use.";
+    }
+    else {
+        answer = "Please ask about library timings, seats, or books.";
+    }
+
+    document.getElementById("aiOutput").innerText = answer;
 }
